@@ -1,6 +1,9 @@
 'use strict';
 import $ from 'jquery';
 
+const global = Function('return this;')();
+global.jQuery = $;
+
 $('.availability-toggle-button').each((i, e) => {
   const button = $(e);
   button.click(() => {
